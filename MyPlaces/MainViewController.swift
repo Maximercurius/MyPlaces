@@ -11,7 +11,7 @@ class MainViewController: UITableViewController {
     
     let restaurantNames = [
     "Chum", "Omar Haiam",
-    "Coffeemakers"]
+    "Coffeemakers", "Genshtab"]
     
 
     override func viewDidLoad() {
