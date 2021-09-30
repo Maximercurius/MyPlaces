@@ -11,18 +11,76 @@
         <scene sceneID="Eyj-M2-uMC">
             <objects>
                 <tableViewController id="FdA-a7-7PF" customClass="MainViewController" customModule="MyPlaces" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9jk-X7-AV5">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="87" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9jk-X7-AV5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="d9V-nn-ln7">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="d9V-nn-ln7" customClass="CustomTableViewCell" customModule="MyPlaces" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="24.5" width="414" height="87"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="d9V-nn-ln7" id="R1c-Ud-sSN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="87"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="IWN-Aa-sj8">
+                                            <rect key="frame" x="15" y="11" width="65" height="65"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="65" id="6W3-Ws-58K"/>
+                                                <constraint firstAttribute="width" constant="65" id="MBB-Iy-Z2A"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d0w-6z-mpF">
+                                            <rect key="frame" x="95" y="9" width="301" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="d84-oD-ifm"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5HZ-qP-aO6">
+                                            <rect key="frame" x="95" y="54" width="317" height="24"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="AHg-6a-FKx"/>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="DBd-ea-FcN"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="13"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RQP-U8-yjg">
+                                            <rect key="frame" x="95" y="35" width="317" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="2Co-LC-9Z9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="15"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="d0w-6z-mpF" secondAttribute="trailing" constant="18" id="1wi-eW-O9Z"/>
+                                        <constraint firstItem="IWN-Aa-sj8" firstAttribute="leading" secondItem="R1c-Ud-sSN" secondAttribute="leading" constant="15" id="2oO-FC-dvP"/>
+                                        <constraint firstItem="5HZ-qP-aO6" firstAttribute="top" secondItem="RQP-U8-yjg" secondAttribute="bottom" constant="1" id="AOk-zu-5nY"/>
+                                        <constraint firstItem="5HZ-qP-aO6" firstAttribute="trailing" secondItem="R1c-Ud-sSN" secondAttribute="trailingMargin" constant="18" id="GoT-fm-2Kc"/>
+                                        <constraint firstItem="RQP-U8-yjg" firstAttribute="leading" secondItem="IWN-Aa-sj8" secondAttribute="trailing" constant="15" id="QxS-8U-J1o"/>
+                                        <constraint firstItem="5HZ-qP-aO6" firstAttribute="leading" secondItem="IWN-Aa-sj8" secondAttribute="trailing" constant="15" id="WRY-jI-YwD"/>
+                                        <constraint firstItem="d0w-6z-mpF" firstAttribute="leading" secondItem="IWN-Aa-sj8" secondAttribute="trailing" constant="15" id="Wha-rI-BWp"/>
+                                        <constraint firstItem="5HZ-qP-aO6" firstAttribute="leading" secondItem="IWN-Aa-sj8" secondAttribute="trailing" constant="15" id="fxb-Rp-l5K"/>
+                                        <constraint firstItem="d0w-6z-mpF" firstAttribute="top" secondItem="R1c-Ud-sSN" secondAttribute="top" constant="9" id="hle-dZ-Yxo"/>
+                                        <constraint firstItem="RQP-U8-yjg" firstAttribute="top" secondItem="d0w-6z-mpF" secondAttribute="bottom" constant="5" id="pKD-hj-S3P"/>
+                                        <constraint firstAttribute="bottom" secondItem="5HZ-qP-aO6" secondAttribute="bottom" constant="9" id="r1h-TA-otn"/>
+                                        <constraint firstItem="IWN-Aa-sj8" firstAttribute="centerY" secondItem="R1c-Ud-sSN" secondAttribute="centerY" id="s9d-ra-YhO"/>
+                                        <constraint firstItem="RQP-U8-yjg" firstAttribute="trailing" secondItem="R1c-Ud-sSN" secondAttribute="trailingMargin" constant="18" id="w3i-ft-74Q"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imageOfPlace" destination="IWN-Aa-sj8" id="HVe-2o-myO"/>
+                                    <outlet property="locationLabel" destination="RQP-U8-yjg" id="BsS-14-Ocn"/>
+                                    <outlet property="nameLabel" destination="d0w-6z-mpF" id="gng-5i-iq2"/>
+                                    <outlet property="typeLabel" destination="5HZ-qP-aO6" id="Egk-lS-KWb"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -34,7 +92,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="48L-KQ-yIc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="448" y="73"/>
+            <point key="canvasLocation" x="447.82608695652175" y="72.991071428571431"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="WsS-3e-aTg">
